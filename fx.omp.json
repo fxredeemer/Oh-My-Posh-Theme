@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "p:red",
+          "background": "p:yellow",
           "foreground": "p:black",
           "leading_diamond": "\ue0b2",
           "properties": {
@@ -39,13 +39,13 @@
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "branch_max_length": 15,
+            "branch_max_length": 20,
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "github_icon": "\uf7a3"
           },
           "style": "powerline",
-          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
           "type": "git"
         }
       ],
